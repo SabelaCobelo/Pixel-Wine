@@ -1,0 +1,308 @@
+/* 
+    Estilo general para el contenedor de la cabecera.
+    - Usamos Flexbox para organizar los elementos del header.
+*/
+header {
+    display: flex;  /* Usamos flexbox para organizar los elementos */
+    justify-content: space-between;  /* Alineamos los elementos a los extremos (logo a la izquierda, título en el centro y menú a la derecha) */
+    align-items: center;  /* Centra los elementos verticalmente */
+    background-color: #f4f4f4;  /* Fondo más claro para el header */
+    color: #333;  /* Texto en color oscuro para contraste */
+    border-bottom: 2px solid #ddd;  /* Línea sutil debajo del header */
+    height: 15em;
+}
+
+/* 
+    Contenedor para el logo.
+    - Usamos Flexbox para organizar el logo y el título en la cabecera.
+*/
+.logo-container {
+    padding-left: 3em;
+    display: flex;  /* Flexbox para alinear el logo */
+    align-items: center;  /* Centra verticalmente el logo */
+    padding-left: 5em;
+}
+
+/* 
+    Estilo para el logo.
+    - Aumentamos el tamaño del logo para que sea más visible pero manteniendo la proporción.
+*/
+.logo {
+    height: 10em;  /* Aumenta el tamaño del logo */
+    width: auto;  /* Mantiene la proporción de la imagen */
+    padding-bottom: 1em;
+}
+
+/* 
+    Contenedor para el título (segunda imagen).
+    - Usamos Flexbox para centrar el título en el medio.
+*/
+.titulo-cabecera {
+    display: flex;  /* Flexbox para alinear el título */
+    justify-content: center;  /* Centra el título horizontalmente */
+    flex-grow: 1;  /* Hace que este contenedor ocupe todo el espacio disponible entre el logo y el menú */
+    padding-left: 9em;
+}
+
+/* 
+    Estilo para el título del sitio (segunda imagen).
+    - Hacemos el título mucho más grande y lo centramos en el medio.
+*/
+.site-title {
+    height: 50em;  /* Aumenta la altura del título */
+    width: auto;  /* Mantiene la proporción del título */
+    max-width: 100%;  /* Hace que la imagen no se desborde */
+}
+
+/* 
+    Estilo para el menú de navegación.
+    - El menú está alineado a la derecha y tiene un diseño más bonito y legible.
+*/
+nav {
+    display: flex;  /* Usamos flexbox para organizar los enlaces del menú */
+    gap: 20px;  /* Añadimos un espacio de 20px entre los botones del menú */
+    padding-right: 2em;
+    padding-bottom: 1em;
+}
+
+/* 
+    Estilo para la lista del menú.
+    - Elimina los puntos de la lista y organiza los enlaces en una fila.
+*/
+ul {
+    list-style: none;  /* Elimina los puntos de la lista */
+    display: flex;  /* Organiza los elementos en una fila */
+    gap: 1em;
+}
+
+/* 
+    Estilo para los enlaces del menú.
+    - Ajustamos el color, el tamaño y la interactividad de los enlaces.
+    - Los enlaces ahora son botones estilizados.
+*/
+.menu-btn {
+    text-decoration: none;  /* Elimina el subrayado de los enlaces */
+    color: white;  /* Color blanco para los botones */
+    font-size: 1.2em;  /* Tamaño de fuente adecuado */
+    font-weight: bold;  /* Enfatiza los botones con negrita */
+    background-color:#800528;   /* Color de fondo anaranjado */
+    padding: 12px 20px;  /* Espaciado dentro del botón */
+    border-radius: 5px;  /* Bordes redondeados para los botones */
+    transition: background-color 0.3s ease, transform 0.3s ease;  /* Transición suave para el fondo y el efecto de escala */
+    border: none;  /* Elimina el borde por defecto del botón */
+}
+
+/* 
+    Efecto hover para los botones del menú.
+    - Cambia el color de los botones al pasar el ratón por encima y añade un efecto de escala.
+*/
+.menu-btn:hover {
+    background-color:#520319;    /* Cambia el fondo a un tono más oscuro de anaranjado */
+    transform: scale(1.1);  /* Agranda ligeramente el botón cuando el ratón pasa por encima */
+}
+/*CORREGIDO HASTA AQUÍ*/
+
+/*ESTILO DE SERVICIOOOS*/
+
+/* Estilo para la sección de los servicios 
+el titulo de la pagina en h1, alineado al centro usando el color
+borgoña y un con un margen en top*/
+h1 {
+    text-align: center;
+    font-size: 2.5em;
+    color: #520319;
+    margin-top: 1em;
+}
+
+/* Estilo para el contenedor de los servicios utilizando Grid */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);  /* 3 columnas */
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.servicio {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.servicio:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.servicio img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+/* Estilo para los títulos dentro de las cards */
+.servicio h3 {
+    font-size: 1.4em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Estilo para las descripciones dentro de las cards */
+.servicio p {
+    font-size: 1em;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+/* Estilo para las tarjetas de servicios */
+.grid-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+    width: 0em;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    font-size: 1.4em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 1em;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+/* Estilo para los testimonios */
+.testimonios {
+    background-color: #fff;
+    padding: 40px 20px;
+    margin: 40px 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    font-size: 2.5em;
+    color: #520319;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.testimonio-fila1 {
+    display: flex;
+    align-items: center;
+    justify-content:left;
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+.testimonio-fila2{
+    display: flex;
+    align-items: center;
+    justify-content:left;
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+
+.testimonial-icon {
+    width: 3em;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.testimonial p {
+    font-size: 1em;
+    color: #555;
+    margin-bottom: 10px;
+    font-style: italic;
+}
+
+.testimonial span {
+    font-size: 1.1em;
+    color: #800528;
+    font-weight: bold;
+}
+
+
+/*FOOTER ESTILO*/
+/* 
+    Estilo general para el footer.
+    - Añadimos un fondo oscuro, un color claro para el texto y una alineación adecuada.
+*/
+footer {
+    background-color: #fbe6e6;  /* Fondo oscuro para el footer */
+    color: #070707;  /* Texto blanco para contraste */
+    padding: 1em;
+    text-align: center;  /* Centra el texto */
+    font-size: 1em;  /* Tamaño de fuente adecuado */
+    color: #520319;  /* Texto en color oscuro para contraste */
+    border-top: 2px solid #ddd;  /* Línea sutil debajo del header */
+    padding-top: 2em;
+}
+
+/* 
+    Estilo para el texto del footer.
+    - Se ajusta la tipografía, el tamaño y el espaciado.
+*/
+footer p {
+    margin-bottom: 20px;  /* Espacio debajo del texto */
+    font-size: 1.1em;  /* Tamaño de fuente ligeramente mayor */
+}
+
+/* 
+    Estilo para los íconos de las redes sociales.
+    - Usamos Flexbox para distribuir los íconos de manera horizontal */
+.social-media {
+    display: flex;  /* Usamos Flexbox para los íconos */
+    justify-content: center;  /* Centra los íconos horizontalmente */
+    gap: 20px;  /* Espacio entre los íconos */
+}
+
+/* 
+    Estilo para los íconos de las redes sociales.
+    - Ajustamos el tamaño de los íconos y añadimos efectos al pasar el ratón. */
+.social-media a img {
+    width: 2em;  /* Ajusta el tamaño de los íconos */
+    height: auto;  /* Asegura que los íconos sean cuadrados */
+    transition: transform 0.3s ease, opacity 0.3s ease;  /* Transición para el efecto hover */
+}
+
+/* 
+    Efecto hover para los íconos de las redes sociales.
+    - Al pasar el ratón, los íconos cambian ligeramente de tamaño y se vuelven más opacos. */
+.social-media a:hover img {
+    transform: scale(1.1);  /* Agranda el ícono ligeramente */
+    opacity: 0.8;  /* Reduce la opacidad para un efecto visual */
+}
