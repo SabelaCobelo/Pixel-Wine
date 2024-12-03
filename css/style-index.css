@@ -105,6 +105,7 @@ h2 {
     font-size: 2.5em;
     color:#520319;
     margin-bottom: 3em;
+    align-items: center;
 }
 
 /*HASTA AQUI ESTÁ CORREGIDO*/
@@ -264,13 +265,6 @@ h2 {
     background-color: #fafafa;  /* Fondo claro para la sección */
     text-align: center;  /* Centra el texto */
 }
-
-
-/* 
-    Contenedor de los episodios utilizando Flexbox.
-    - Organizamos los episodios en 2 filas y 3 columnas.
-    - Aseguramos que Flexbox divida los elementos de manera adecuada.
-*/
 
 
 /* 
