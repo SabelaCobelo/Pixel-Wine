@@ -1,308 +1,389 @@
-/* 
-    Estilo general para el contenedor de la cabecera.
-    - Usamos Flexbox para organizar los elementos del header.
-*/
+/*-----------------------
+-------------------------
+----ESTILO DEL HEADER----
+-------------------------
+-----------------------*/
+
+/*Estilo aplicado al header con un display flex para organizar los elementos, justifi-content para alinear a los extremos
+se aplica un background color y un color al texto, por último una linea suave inferior para separar secciones*/
 header {
-    display: flex;  /* Usamos flexbox para organizar los elementos */
-    justify-content: space-between;  /* Alineamos los elementos a los extremos (logo a la izquierda, título en el centro y menú a la derecha) */
-    align-items: center;  /* Centra los elementos verticalmente */
-    background-color: #f4f4f4;  /* Fondo más claro para el header */
-    color: #333;  /* Texto en color oscuro para contraste */
-    border-bottom: 2px solid #ddd;  /* Línea sutil debajo del header */
+    display: flex;  
+    justify-content: space-between; 
+    align-items: center; 
+    background-color: #f4f4f4; 
+    color: #333; 
+    border-bottom: 2px solid #ddd;  
     height: 15em;
 }
 
-/* 
-    Contenedor para el logo.
-    - Usamos Flexbox para organizar el logo y el título en la cabecera.
-*/
+/* Se aplica el estilo en el logo, con flex y se le aplica un padding para distanciarlo del margen izquierdo.*/
 .logo-container {
-    padding-left: 3em;
-    display: flex;  /* Flexbox para alinear el logo */
-    align-items: center;  /* Centra verticalmente el logo */
+    display: flex; 
+    align-items: center;
     padding-left: 5em;
 }
 
-/* 
-    Estilo para el logo.
-    - Aumentamos el tamaño del logo para que sea más visible pero manteniendo la proporción.
-*/
+/*Estilo para ajustar el tamaño del logo manteniendo la proporción.*/
 .logo {
-    height: 10em;  /* Aumenta el tamaño del logo */
-    width: auto;  /* Mantiene la proporción de la imagen */
+    height: 10em;
+    width: auto; 
     padding-bottom: 1em;
 }
 
-/* 
-    Contenedor para el título (segunda imagen).
-    - Usamos Flexbox para centrar el título en el medio.
-*/
+/* Estilo para la imagen del titulo de web, usando flex y justificando el contenido, haciendo que el contenedor ocupe todo el espacio disponible
+entre el logo y el menú para darle mas importancia. Además se establece un padding a la izquierda de 9em para centrarlo.*/
 .titulo-cabecera {
-    display: flex;  /* Flexbox para alinear el título */
-    justify-content: center;  /* Centra el título horizontalmente */
-    flex-grow: 1;  /* Hace que este contenedor ocupe todo el espacio disponible entre el logo y el menú */
+    display: flex; 
+    justify-content: center; 
+    flex-grow: 1;  
     padding-left: 9em;
 }
 
-/* 
-    Estilo para el título del sitio (segunda imagen).
-    - Hacemos el título mucho más grande y lo centramos en el medio.
-*/
+/* Estilo para el título de la web, el título mucho más grande y lo centramos en el medio, poniendo un ancho máximo  y una altura de 50em*/
 .site-title {
-    height: 50em;  /* Aumenta la altura del título */
-    width: auto;  /* Mantiene la proporción del título */
-    max-width: 100%;  /* Hace que la imagen no se desborde */
+    height: 40em;
+    width: auto;  
+    max-width: 100%;  
 }
 
-/* 
-    Estilo para el menú de navegación.
-    - El menú está alineado a la derecha y tiene un diseño más bonito y legible.
-*/
+/* Estilo para el menú de navegación, alineado a la derecha y un espacio entre botones*/
 nav {
-    display: flex;  /* Usamos flexbox para organizar los enlaces del menú */
-    gap: 20px;  /* Añadimos un espacio de 20px entre los botones del menú */
+    display: flex;
+    gap: 20px;
     padding-right: 2em;
     padding-bottom: 1em;
 }
 
-/* 
-    Estilo para la lista del menú.
-    - Elimina los puntos de la lista y organiza los enlaces en una fila.
-*/
+/* Estilo para la lista del menú, eliminando el estilo de la lista y organizando los enlaces en una fila.*/
 ul {
-    list-style: none;  /* Elimina los puntos de la lista */
-    display: flex;  /* Organiza los elementos en una fila */
+    list-style: none; 
+    display: flex;  
     gap: 1em;
 }
 
-/* 
-    Estilo para los enlaces del menú.
-    - Ajustamos el color, el tamaño y la interactividad de los enlaces.
-    - Los enlaces ahora son botones estilizados.
-*/
+/* Estilo para los botones del menú, se eliminan las decoraciones, se le aplica color de fondo y color de letra.
+Se aplica la negrita para destacar el texto y se aplica un padding y un border radius y se elimina el borde.*/
 .menu-btn {
-    text-decoration: none;  /* Elimina el subrayado de los enlaces */
-    color: white;  /* Color blanco para los botones */
-    font-size: 1.2em;  /* Tamaño de fuente adecuado */
-    font-weight: bold;  /* Enfatiza los botones con negrita */
-    background-color:#800528;   /* Color de fondo anaranjado */
-    padding: 12px 20px;  /* Espaciado dentro del botón */
-    border-radius: 5px;  /* Bordes redondeados para los botones */
-    transition: background-color 0.3s ease, transform 0.3s ease;  /* Transición suave para el fondo y el efecto de escala */
-    border: none;  /* Elimina el borde por defecto del botón */
+    text-decoration: none; 
+    color: white;  
+    font-size: 1.2em; 
+    font-weight: bold;  
+    background-color:#800528; 
+    padding: 12px 20px; 
+    border-radius: 5px; 
+    border: none; 
 }
 
-/* 
-    Efecto hover para los botones del menú.
-    - Cambia el color de los botones al pasar el ratón por encima y añade un efecto de escala.
-*/
+/* Se aplica un efecto hover para los botones en el que se hace un cambio de color y se agrandan ligeramente.*/
 .menu-btn:hover {
-    background-color:#520319;    /* Cambia el fondo a un tono más oscuro de anaranjado */
-    transform: scale(1.1);  /* Agranda ligeramente el botón cuando el ratón pasa por encima */
-}
-/*CORREGIDO HASTA AQUÍ*/
-
-/*ESTILO DE SERVICIOOOS*/
-
-/* Estilo para la sección de los servicios 
-el titulo de la pagina en h1, alineado al centro usando el color
-borgoña y un con un margen en top*/
-h1 {
-    text-align: center;
-    font-size: 2.5em;
-    color: #520319;
-    margin-top: 1em;
+    background-color:#520319;
+    transform: scale(1.1); 
 }
 
-/* Estilo para el contenedor de los servicios utilizando Grid */
-.grid-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);  /* 3 columnas */
-    gap: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 40px 20px;
-}
-
-.servicio {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.servicio:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-}
-
-.servicio img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 8px;
-    margin-bottom: 15px;
-}
-
-/* Estilo para los títulos dentro de las cards */
-.servicio h3 {
-    font-size: 1.4em;
-    color: #333;
-    margin-bottom: 10px;
-}
-
-/* Estilo para las descripciones dentro de las cards */
-.servicio p {
-    font-size: 1em;
-    color: #666;
-    margin-bottom: 10px;
-}
-
-/* Estilo para las tarjetas de servicios */
-.grid-cards {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 40px 20px;
-}
-
-.card {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    text-align: center;
-}
-
-.card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-}
-
-.card img {
-    width: 0em;
-    height: auto;
-    object-fit: cover;
-    border-radius: 8px;
-    margin-bottom: 15px;
-}
-
-.card h3 {
-    font-size: 1.4em;
-    color: #333;
-    margin-bottom: 10px;
-}
-
-.card p {
-    font-size: 1em;
-    color: #666;
-    margin-bottom: 10px;
-}
-
-/* Estilo para los testimonios */
-.testimonios {
-    background-color: #fff;
-    padding: 40px 20px;
-    margin: 40px 0;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
+/*Se aplica estilo a todos los h2, cambiando el color del texto, alineandolo al centro y aplicando un tamaño de letra*/
 h2 {
-    font-size: 2.5em;
-    color: #520319;
     text-align: center;
-    margin-bottom: 30px;
+    color: #800020;
+    margin-bottom: 20px;
+    font-size:2.5em;
 }
 
-.testimonio-fila1 {
+
+/*-----------------------
+-------------------------
+----ESTILO SERVICIOS-----
+-------------------------
+-----------------------*/
+
+/* Estilo del la seccion "Sobre nosotros", se alinea el texto con la imagen y se ajusta para hagan wrap si no hay espacio. 
+Se aplica un espacio (gap) entre el texto y la imagen y se establece un padding y un la linea sutil debajo para separar secciones*/
+.About-Us {
     display: flex;
-    align-items: center;
-    justify-content:left;
-    flex-direction: column;
-    margin-bottom: 30px;
-}
-.testimonio-fila2{
-    display: flex;
-    align-items: center;
-    justify-content:left;
-    flex-direction: column;
-    margin-bottom: 30px;
+    flex-wrap: wrap;
+    align-items: flex-start; 
+    margin: 20px;
+    gap: 10px; 
+    background-color:#F8F5F2;
+    padding-bottom: 2em;
+    border-bottom: 2px solid #ddd;  
+
 }
 
-.testimonial-icon {
-    width: 3em;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 10px;
+/*Se aplica estilo al h2 de la seccion de about, se alinea el texto en el centro de la pagina, se asigana un ancho del 100% al contenedor
+un tamaño de texto y un color especifico dentro de la paleta de la guia de estilos*/
+.About-Us h2 {
+    text-align: center;
+    width: 100%; 
+    margin-bottom: 20px;
+    font-size: 2.5em;
+    color:#800020;
 }
-
-.testimonial p {
+/*Aplica el estilo a los parrafos de texto del about, en el que el texto ocupa el espacio disponible y justificado
+se aplica un tamaño de letra y un color y se establece un padding*/
+.About-Us p {
+    flex: 2; 
+    text-align: justify; 
     font-size: 1em;
-    color: #555;
-    margin-bottom: 10px;
-    font-style: italic;
+    line-height: 1.8; 
+    color: #000000;
+    padding-left: 5em;
+    padding-right: 2em;
+}
+/*Estilo para la imagen, se mantienen las proporciones originales y un ancho del 15% para poder disminuir su tamaño
+Se alinea la imagen con la parte superior del texto*/
+.About-Us img {
+    max-width: 15%; 
+    height: 100px; 
+    align-self:baseline; 
 }
 
-.testimonial span {
-    font-size: 1.1em;
-    color: #800528;
+
+/*----------------------
+------------------------
+------------------------
+---NUESTROS PODCASTS----
+------------------------
+----------------------*/
+
+
+/*Se aplica un estilo al contenedor de los episodios, con flex y estableciendo un gap
+La dirección del flex se hace en filas, se cambiará en el siguiente commit*/
+.container-flex{
+    display:flex;   
+    gap: 20px;
+    flex-direction: row; /*ES AQUIIIIIIIIIIII*/
+
+}
+
+/*Estilo de cada episodio del podcast ocupando un 30% del espacio disponible, con un borde radius y 
+una sombra negra y un efecto de transición en el que la "tarjeta" se mueve al pasar el ratón*/
+.episode {
+    flex: 1 1 30%; 
+    background-color: #fff; 
+    padding: 20px;
+    border-radius: 10px;  
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  
+    transition: transform 0.3s ease, box-shadow 0.3s ease;  
+    text-align: center;    
+    overflow: hidden;
+}
+
+
+/* Estilo del contenedor del contenido del episodio 
+centra los elementos horizontalmente*/
+.episode .content {
+    padding: 15px;
+    display: flex;
+    align-items: center; 
+    gap: 1em; 
+    flex-wrap: wrap;
+}
+
+.episode:hover {
+    transform: translateY(-10px);  /* Efecto de elevación al pasar el ratón */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);  /* Sombra más pronunciada */
+}
+
+/* Estilo para el botón, padding, color, color de fondo, border radius... */
+.episode .content .listen-btn {
+    background-color:#520319;
+    color: white; 
+    padding: 10px 20px; 
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+/* Efecto hover para el botón que cambia el color*/
+.episode .content .listen-btn:hover {
+    background-color: #F8F5F2; 
+    color: #520319; 
+}
+
+/*Estilo para los h3 dentro de episodios*/
+.episode h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #FFFFFF;
+    text-align: center;    
     font-weight: bold;
 }
 
+/*Estilo del texto de cada tarjeta*/
+.episode p {
+    font-size: 1em;
+    color: #666;
+    margin-bottom: 10px;
+    padding: 3em;
+}
 
-/*FOOTER ESTILO*/
-/* 
-    Estilo general para el footer.
-    - Añadimos un fondo oscuro, un color claro para el texto y una alineación adecuada.
-*/
+
+/* Estilo para las imagenes con un alto y ancho determinado,
+con un border radius y un margen inferior*/
+.episode img {
+    width: 150px;  
+    height: 150px; 
+    object-fit: cover;  
+    border-radius: 8px;   
+}
+
+
+/* Estilo para las estrellas y la calificación.*/
+.rating {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    margin-top: 10px;
+}
+
+/*Estilo de las estrellas, con un tamaño y un color*/
+.stars {
+    color: #ffd700;
+    font-size: 1.5em;
+}
+
+/*Estilo de los numeros de la calificación*/
+.rating-number {
+    font-size: 1.2em;
+}
+
+
+/*-----------------------------
+-------------------------------
+-----FORO DE LA COMUNIDAD------
+-------------------------------
+-----------------------------*/
+
+/*Estilo aplicado al foro de la comunidad, con un color de fondo, padding, margen y border radius.*/
+.community-forum {
+    padding: 40px;
+    background-color: #f4f4f4;
+    margin-top: 40px;
+    border-radius: 8px;
+}
+/*Estilo para los h2 que están dentro del foro de la comunidad, con un color de texto, un margen inferior y el texto alineado al centro*/
+.community-forum h2 {
+    text-align: center;
+    color: #800020; 
+    margin-bottom: 20px;
+    
+}
+/*Estilo para los comentarios, con flex, dispuesto en columnas y gap (espacio) entre los mismos*/
+.comments {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+/*Estilo para cada uno de los comentarios, con un color de fondo, border radius, padding y una sombra negra*/
+.comment {
+    display: flex;
+    gap: 10px;
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+/*Estilo para la imagen adjunta al comentario*/
+.comment .user-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.comment-content {
+    flex: 1;
+}
+/*Estilo para el nombre del usuario del comentario, en negrita y en color diferente*/
+.comment .user-name {
+    font-weight: bold;
+    color: #520319; 
+}
+/*Estilo para el parrafo del comentario, con un margen superior y un tamaño de letra */
+.comment p {
+    margin-top: 5px;
+    font-size: 1rem;
+}
+/*Estilo del formulario, con flex, dispuesto en columnas, gap establecido*/
+.comment-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 30px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*Estilos para el formulario con borde, padding, border radius y tamaño de letra*/
+.comment-form input,
+.comment-form textarea {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+/*Estilo para el botón de enviar comentario*/
+.comment-form button {
+    background-color: #800020; /* Color borgoña */
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+/*Estilo para el hover del botón de envio de comentario*/
+.comment-form button:hover {
+    background-color: #520319;
+}
+
+
+
+/*-----------------------
+-------------------------
+----ESTILO DEL FOOTER----
+-------------------------
+-----------------------*/
+
+
+/*Estilo general del footer, con un fondo, letra de color negro, padding, texto alineado al centro
+linea sutil en el borde superior para separar secciones y un padding*/
 footer {
-    background-color: #fbe6e6;  /* Fondo oscuro para el footer */
-    color: #070707;  /* Texto blanco para contraste */
+    background-color: #fbe6e6;
+    color: #070707;  
     padding: 1em;
-    text-align: center;  /* Centra el texto */
-    font-size: 1em;  /* Tamaño de fuente adecuado */
-    color: #520319;  /* Texto en color oscuro para contraste */
-    border-top: 2px solid #ddd;  /* Línea sutil debajo del header */
+    text-align: center;  
+    font-size: 1em;  
+    color: #520319;  
+    border-top: 2px solid #ddd;  
     padding-top: 2em;
 }
-
-/* 
-    Estilo para el texto del footer.
-    - Se ajusta la tipografía, el tamaño y el espaciado.
-*/
+/*Estilo para el texto del footer, con un margen inferior y un tamaño de fuente*/
 footer p {
-    margin-bottom: 20px;  /* Espacio debajo del texto */
-    font-size: 1.1em;  /* Tamaño de fuente ligeramente mayor */
+    margin-bottom: 20px;  
+    font-size: 1.1em;  
 }
 
-/* 
-    Estilo para los íconos de las redes sociales.
-    - Usamos Flexbox para distribuir los íconos de manera horizontal */
+/* Estilo de los iconos de las RRSS, usando flex para su distribución horizontal y un gap para espaciar los iconos.*/
 .social-media {
-    display: flex;  /* Usamos Flexbox para los íconos */
-    justify-content: center;  /* Centra los íconos horizontalmente */
-    gap: 20px;  /* Espacio entre los íconos */
+    display: flex;  
+    justify-content: center;  
+    gap: 20px;  
 }
 
-/* 
-    Estilo para los íconos de las redes sociales.
-    - Ajustamos el tamaño de los íconos y añadimos efectos al pasar el ratón. */
+/* Se ajusta el tamaño de los iconos, que aumentan su tamaño cuando se pasa el ratón por encima */
 .social-media a img {
-    width: 2em;  /* Ajusta el tamaño de los íconos */
-    height: auto;  /* Asegura que los íconos sean cuadrados */
-    transition: transform 0.3s ease, opacity 0.3s ease;  /* Transición para el efecto hover */
+    width: 2em; 
+    height: auto; 
+    transition: transform 0.3s ease, opacity 0.3s ease; 
 }
 
-/* 
-    Efecto hover para los íconos de las redes sociales.
-    - Al pasar el ratón, los íconos cambian ligeramente de tamaño y se vuelven más opacos. */
+/* Aplica el efecto hover en los iconos de las RRSS, efecto hover para los íconos de las redes sociales.*/
 .social-media a:hover img {
-    transform: scale(1.1);  /* Agranda el ícono ligeramente */
-    opacity: 0.8;  /* Reduce la opacidad para un efecto visual */
+    transform: scale(1.1); 
 }
